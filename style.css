@@ -1,0 +1,230 @@
+/* Universal Css */
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Body Css */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #212121;
+  color: white;
+  font-family: "Spectral", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Main Container Css */
+#Main-Container {
+  height: 500px;
+  width: 800px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Left-Side-Part */
+#Left-Side-Part {
+  width: 400px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+/* Left Side Top Text Css */
+.Top-Text h1 {
+  text-align: center;
+  background: linear-gradient(to bottom right, #0033cc 0%, #cc0000 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 2rem blue;
+  font-size: 35px;
+  line-height: 30px;
+}
+
+.Top-Text p {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.Btns {
+  margin: auto;
+  margin-top: 40px;
+  height: 50px;
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+.Btns button {
+  height: 50px;
+  border: none;
+  width: 50px;
+  border-radius: 50%;
+  opacity: 0.65;
+  cursor: pointer;
+}
+
+#Red {
+  background-color: red;
+}
+
+#Yellow {
+  background-color: yellow;
+}
+
+#Green {
+  background-color: green;
+}
+
+#Timer {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#Timer h3 {
+  background: linear-gradient(to left, #0000ff 46%, #ff0000 55%);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 1rem white;
+  font-size: 30px;
+  line-height: 40px;
+  word-spacing: 10px;
+}
+
+#Timer h3 span {
+  border-bottom: 2px solid white;
+}
+
+/* Right-Side-Part */
+#Right-Side-Part {
+  width: 400px;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main Platform */
+.Main-Platform {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Platform {
+  height: fit-content;
+}
+
+.Platform div {
+  height: 60px;
+  width: 10px;
+  opacity: 0.5;
+}
+
+.Platform .Black {
+  background-color: black;
+}
+
+.Platform .White {
+  background-color: white;
+}
+
+/* Track */
+.Track {
+  margin-top: 30px;
+  position: relative;
+}
+
+.Rail-Track div {
+  height: 4px;
+  width: 120px;
+  background-color: white;
+  margin-top: 19px;
+  border-radius: 5px;
+  margin-left: 14px;
+  margin-right: 14px;
+  z-index: -1;
+}
+
+.Train {
+  height: 650px;
+  width: 90%;
+  top: 10%;
+  position: absolute;
+  background-color: #00008b;
+  margin-left: 8px;
+  border-radius: 10px;
+  transition: 5s ease-in-out;
+  animation: Train 5s 1 ease-in-out;
+}
+
+.Light-Glow {
+  height: 120px;
+  width: 120px;
+  position: relative;
+  bottom: 120px;
+  left: -254%;
+  border-radius: 50% 50% 50% 50% / 0% 0% 100% 100%;
+  animation: Head-Light 3s infinite ease-in-out;
+}
+
+.Head-Light {
+  margin: auto;
+  background-color: blue;
+  height: 20px;
+  width: 20px;
+  position: relative;
+  bottom: 10px;
+  z-index: 1;
+  border-radius: 50px 50px 150px 150px / 25px 25px 150px 150px;
+}
+
+.Body {
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Body div {
+  height: 45px;
+  width: 85%;
+  background-color: #8b0000;
+  margin-top: 17px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes Head-Light {
+  0%,
+  100% {
+    background-color: #cc6600;
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 0.5;
+    filter: brightness(50%);
+  }
+}
+
+@keyframes Train {
+  0%{
+    top: 200%;
+  }
+  100%{
+    transition: 3s ease-in-out;
+    top: 10%;
+  }
+}
